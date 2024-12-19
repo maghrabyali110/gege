@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مفاجأة كبرى</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #222;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .welcome-text {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInOut 4s forwards;
+            word-wrap: break-word;
+        }
+        .surprise-text {
+            font-size: 1.5rem;
+            opacity: 0;
+            animation: fadeInOut 4s 2s forwards;
+            word-wrap: break-word;
+        }
+        .image-container {
+            display: none;
+            animation: fadeIn 2s forwards;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+            }
+            25% {
+                opacity: 1;
+            }
+            75% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-text">أهلاً بكم</div>
+        <div class="surprise-text">والآن مع المفاجأة الكبرى جهاد الراقصة حبيبت قلب ونن عيون غوغو ضناها</div>
+        <div class="image-container">
+            <img src="New folder/WhatsApp Image 2024-11-29 at 05.16.48_0e65a123.jpg" alt="Surprise Image">
+        </div>
+    </div>
+
+    <script>
+        // إخفاء النصوص وعرض الصورة بعد انتهاء النصوص
+        setTimeout(() => {
+            document.querySelector('.welcome-text').style.display = 'none';
+            document.querySelector('.surprise-text').style.display = 'none';
+            document.querySelector('.image-container').style.display = 'block';
+        }, 6000); // وقت عرض النصوص بالكامل
+    </script>
+</body>
+</html>
